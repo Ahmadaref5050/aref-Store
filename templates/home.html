@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+
+{% block main %}
+
+     <h1 style='text-align: center; color: #5e6936;'>Our Products</h1>
+          {% for stock in stocks %}
+                         <div class='container' style='align: centered'>
+                              <form action='/buy' method='GET' style='text-align: center'>
+                                   <div class="card" style="width: 100%;">
+                                     <img class="card-img-top" src={{stock['image_file']}} alt="Card image cap">
+                                     <div class="card-body">
+                                          <h5 class="card-title">{{stock['name']}}</h5>
+                                           <p class="card-text">{{stock['description']}}</p>
+                                           <input name='stock' style='display: none' value= {{stock['id']}}>
+                                     </div>
+                                     <button type='sumbit' class='btn btn-warning' style='text-align: center'>Buy</button>
+                                   </div>
+                              </form>
+                              <br> </br>
+                         </div>
+                         <!--end card-->
+          {% endfor %}
+{% endblock %}

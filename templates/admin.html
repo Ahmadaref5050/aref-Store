@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    buy
+{% endblock %}
+
+
+
+{% block main %}
+<div class='container' style='margin-left: auto; margin-right: auto;'>
+
+    {% for deal in deals %}
+
+     <div class="card" style="width: 18rem;">
+       <div class="card-body">
+          <p>id: {{ deal['id'] }}</p>
+          <p>Client name: {{ deal['clientName'] }}</p>
+          <p>Stock name: {{ deal['stockName'] }}</p>
+          <p>Quantity: {{ deal['stocks_num'] }}</p>
+          <p>Date of buy: {{ deal['date'] }}</p>
+          <p>Phone Number: {{ deal['phone'] }}</p>
+          <p>Total Price: {{ deal['total_price'] }}</p>
+          <p>Address: {{ deal['address'] }}</p>
+          <input type='text' placeholder='detailed address' autocomplete='off' autofocus>
+          <br></br>
+           <form action='/admin' method='post'>
+                <input name='deal_id' placeholder='id...' type='number'>
+                <br></br>
+                <button type='submit' class='btn btn-warning' style='width: 30;'>Delivered</button>
+           </form>
+       </div>
+     </div>
+     <br></br>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

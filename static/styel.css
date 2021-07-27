@@ -1,0 +1,35 @@
+
+
+
+    h1
+    {
+         color: red;
+    }
+    .ActivityRings {
+        height: 100%;
+        width: 100%;
+
+        circle {
+            fill: none;
+        }
+    }
+
+    $color-red: #c53f3d;
+    .ring1 {
+        .background {
+            stroke: transparentize($color-red, 0.8);
+        }
+    }
+
+    .table{
+        width: clamp(200px, 50%, 600px);
+    }
+
+.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+

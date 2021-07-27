@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+
+
+{% block main %}
+     <h1> </h1>
+
+
+     <div class='form-group'>
+          <h4 style='text-align: center; color: #5D5D5D; width: 50; height: 10'>أول مرة تزور موقعنا؟ <a href='/register'>أنشئ حسابا</a> أو سجل دخول أدناه</h4>
+     </div>
+
+     <form action='/login' method='POST' style='text-align: center' class='form-input'>
+          <div class='form-group'>
+               <input type='text' placeholder='username' name='username' autofocus autocomplete='off'>
+          </div>
+
+          <div class='form-group'>
+               <input type='type' placeholder='password' name='password' autocomplete='off'>
+          </div>
+
+          <button type='submit' class='btn btn-primary'>Login</button>
+     </form>
+
+
+{% endblock %}

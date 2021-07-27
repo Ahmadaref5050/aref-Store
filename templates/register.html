@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+
+
+{% block main %}
+     <h1> </h1>
+
+
+     <div class='form-group'>
+          <h4 style='text-align: center; color: #5D5D5D; width: 50; height: 10'>أدخل بياناتك أدناه </h4>
+     </div>
+
+     <form action='/register' method='POST' style='text-align: center' class='form-input'>
+          <div class='form-group'>
+               <input id='1' type='text' placeholder='الاسم' name='username' autofocus autocomplete='off'>
+          </div>
+
+          <div class='form-group'>
+               <input id='2' type='type' placeholder='أنشئ كلمة مرور' name='password' autocomplete='off'>
+          </div>
+
+          <div class='form-group'>
+               <input id='3' type='type' placeholder='كلمة المرور مرة أخري' name='confirmPassword' autocomplete='off'>
+          </div>
+          <button type='submit' class='btn btn-primary'>أنشئ حساب</button>
+     </form>
+
+
+
+{% endblock %}
